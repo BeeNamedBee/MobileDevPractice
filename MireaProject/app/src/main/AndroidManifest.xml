@@ -21,5 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".PlayerService"
+            android:exported="true"
+            android:label="Music Player"
+            android:permission="android.permission.MEDIA_CONTENT_CONTROL" />
     </application>
 </manifest>
