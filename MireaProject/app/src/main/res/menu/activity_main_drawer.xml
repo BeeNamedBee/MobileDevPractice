@@ -23,5 +23,10 @@
             android:id="@+id/nav_player"
             android:icon="@android:drawable/ic_media_play"
             android:title="@string/menu_player" />
+
+        <item
+            android:id="@+id/nav_service"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/label_service" />
     </group>
 </menu>

@@ -12,4 +12,6 @@
     <string name="menu_browser">Browser</string>
     <string name="label_player">Player</string>
     <string name="menu_player">Player</string>
+    <string name="label_service">Service</string>
+
 </resources>
