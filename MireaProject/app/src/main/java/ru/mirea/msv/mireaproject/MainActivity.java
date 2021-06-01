@@ -2,16 +2,18 @@ package ru.mirea.msv.mireaproject;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.TextView;
 
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,10 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
+        ((TextView)(navigationView.getHeaderView(0).findViewById(R.id.textViewNavHeaderMainName))).setText(
+                getPreferences(MODE_PRIVATE).getString(Settings.SP_NAME, "SomeUserName")
+        );
+        ((TextView)(navigationView.getHeaderView(0).findViewById(R.id.textViewNavHeaderMainEmail))).setText(
+                getPreferences(MODE_PRIVATE).getString(Settings.SP_EMAIL, "some@user.email")
+        );
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_calculator, R.id.nav_browser, R.id.nav_player, R.id.nav_service)
+                R.id.nav_home, R.id.nav_calculator, R.id.nav_browser, R.id.nav_player, R.id.nav_service, R.id.nav_settings, R.id.nav_histories)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

@@ -31,4 +31,24 @@
         android:name="ru.mirea.msv.mireaproject.Sensors"
         android:label="@string/label_service"
         tools:layout="@layout/fragment_service" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ru.mirea.msv.mireaproject.Settings"
+        android:label="@string/label_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_histories"
+        android:name="ru.mirea.msv.mireaproject.Histories"
+        android:label="@string/label_histories"
+        tools:layout="@layout/fragment_histories" />
+    <!--<fragment
+        android:id="@+id/dialog_histories_fragment"
+        android:name="ru.mirea.msv.mireaproject.HistoriesDialogFragment"
+        android:label="@string/label_dialog_histories"
+        tools:layout="@layout/dialog_histories_add" />-->
+    <fragment
+        android:id="@+id/nav_https"
+        android:name="ru.mirea.msv.mireaproject.WHOIS_HTTPS_QUERY"
+        android:label="@string/whois_https_label"
+        tools:layout="@layout/fragment_whois_https"/>
 </navigation>
