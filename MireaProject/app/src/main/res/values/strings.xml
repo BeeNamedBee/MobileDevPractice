@@ -24,5 +24,6 @@
         затем через другой API делаем WHOIS запрос на
         полученный ранее IP.
     </string>
+    <string name="label_maps">Maps</string>
 
 </resources>

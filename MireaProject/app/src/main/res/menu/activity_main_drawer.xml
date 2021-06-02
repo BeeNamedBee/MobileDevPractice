@@ -42,5 +42,9 @@
             android:id="@+id/nav_https"
             android:icon="@android:drawable/ic_menu_help"
             android:title="@string/whois_https_label" />
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="@string/label_maps" />
     </group>
 </menu>

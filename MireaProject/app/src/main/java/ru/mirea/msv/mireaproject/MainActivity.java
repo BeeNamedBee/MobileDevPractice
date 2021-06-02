@@ -2,7 +2,6 @@ package ru.mirea.msv.mireaproject;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 getPreferences(MODE_PRIVATE).getString(Settings.SP_EMAIL, "some@user.email")
         );
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_calculator, R.id.nav_browser, R.id.nav_player, R.id.nav_service, R.id.nav_settings, R.id.nav_histories)
+                R.id.nav_home, R.id.nav_calculator, R.id.nav_browser, R.id.nav_player, R.id.nav_service, R.id.nav_settings, R.id.nav_histories, R.id.nav_https, R.id.nav_maps)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

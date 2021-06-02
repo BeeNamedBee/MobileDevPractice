@@ -1,6 +1,5 @@
 package ru.mirea.msv.mireaproject;
 
-import android.content.pm.InstrumentationInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -111,7 +110,8 @@ public class WHOIS_HTTPS_QUERY extends Fragment {
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
-            if (result != null && result.charAt(0) == '{') {
+            if (result != null)
+            if (result.charAt(0) == '{'){
                 StringBuilder sb = new StringBuilder();
                 JsonObject jo = gson.fromJson(result, JsonObject.class);
                 ArrayList<String> keys = new ArrayList<>(jo.keySet());
